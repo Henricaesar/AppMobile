@@ -71,6 +71,7 @@ class _AddEditScreenState extends State<AddEditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
         title: Text(
           widget.item == null ? 'Add Item' : 'Edit Item',
           style: TextStyle(color: Colors.white), // Ubah warna teks judul
@@ -173,6 +174,58 @@ class _AddEditScreenState extends State<AddEditScreen> {
                       ),
                     ],
                   ),
+=======
+        title: Text(widget.item == null ? 'Add Item' : 'Edit Item'),
+      ),
+      body: _isLoading
+          ? LoadingIndicator()
+          : Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: [
+                    TextFormField(
+                      controller: _kodeController,
+                      decoration: InputDecoration(labelText: 'Kode'),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter kode';
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: _namaController,
+                      decoration: InputDecoration(labelText: 'Nama'),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter nama';
+                        }
+                        return null;
+                      },
+                    ),
+                    TextFormField(
+                      controller: _qtyController,
+                      decoration: InputDecoration(labelText: 'Qty'),
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter qty';
+                        }
+                        if (int.tryParse(value) == null) {
+                          return 'Please enter a valid number';
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: _submitForm,
+                      child: Text('Save'),
+                    ),
+                  ],
+>>>>>>> f339b0bd9b49d784d7662b1ad17cfdc99e1af99b
                 ),
               ),
             ),

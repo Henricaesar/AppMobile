@@ -30,7 +30,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+<<<<<<< HEAD
   animated_text_kit: ^4.2.1
+=======
+ 
+>>>>>>> f339b0bd9b49d784d7662b1ad17cfdc99e1af99b
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -40,7 +44,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+<<<<<<< HEAD
     
+=======
+>>>>>>> f339b0bd9b49d784d7662b1ad17cfdc99e1af99b
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
